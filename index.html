@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HUNT2BUILD — A One Piece-themed hackathon by CSE Club · ESI</title>
   <meta name="description" content="Scan the code, solve the problem, find the treasure. Nine crews hunt for hidden QR treasures across ESI campus, then get 72 hours to build what they unlock." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -15,8 +16,8 @@
   <!-- NAV -->
   <header class="nav" id="top">
     <a class="brand" href="#top" aria-label="HUNT2BUILD — home">
-      <img class="brand__mark" src="assets/logo-mark.png" alt="" />
-      <img class="brand__name" src="assets/logo-name.png" alt="HUNT2BUILD" />
+      <img class="brand__mark" src="assets/logo-mark.svg" alt="" />
+      <img class="brand__name" src="assets/logo-name.svg" alt="HUNT2BUILD" />
     </a>
 
     <nav class="nav__links" id="navLinks" aria-label="Primary">
@@ -28,11 +29,11 @@
 
     <a class="btn-mint btn-mint--nav" href="#join">
       <span>Register</span>
-      <img src="assets/flag.png" alt="" />
+      <img src="assets/flag.svg" alt="" />
     </a>
 
     <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
+      <img src="assets/Menu.svg" alt="" aria-hidden="true" />
     </button>
   </header>
 
@@ -69,7 +70,7 @@
         <div class="hero__ctas">
           <a class="btn-mint btn-mint--hero" href="#join">
             <span>Register your crew</span>
-            <img src="assets/flag.png" alt="" />
+            <img src="assets/flag.svg" alt="" />
           </a>
           <a class="btn btn--outline" href="#how">
             <span>READ THE MAP</span>
@@ -77,16 +78,16 @@
         </div>
 
         <div class="hero__meta">
-          <img class="hero__ixe" src="assets/ixe.png" alt="IXE" />
-          <span class="chip">CSE CLUB · ESI ALGER</span>
+          <img class="hero__ixe" src="assets/ixe.svg" alt="IXE" />
+          <span class="chip">CSE CLUB · ESI<span class="hide-mobile"> ALGER</span></span>
           <span class="chip chip--copper">DATE: TBA</span>
-          <span class="chip chip--dark">9 CREWS MAX</span>
+          <span class="chip chip--dark">9 CREWS<span class="hide-mobile"> MAX</span></span>
         </div>
       </div>
 
       <div class="hero__map" id="heroMap">
         <div class="map">
-          <div class="map__img-wrap"><img src="assets/map.png" alt="Treasure map of ESI campus" /></div>
+          <div class="map__img-wrap"><img src="assets/map.svg" alt="Treasure map of ESI campus" /></div>
           <div class="map__label map__label--top"><p class="mono-label">ESI CAMPUS · GRAND LINE</p></div>
           <div class="map__label map__label--start"><p class="mono-label">START</p></div>
           <div class="map__label map__label--x"><p class="script script--s">x marks the QR</p></div>
@@ -163,7 +164,35 @@
       </div>
 
       <div class="board__grid-wrap">
-        <div class="qr-grid" id="qrGrid" role="list"></div>
+        <div class="qr-grid" id="qrGrid" role="list">
+          <button class="qr-tile" type="button" role="listitem" aria-label="Open QR code 01">
+            <img src="assets/QR%20grid.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="qr-tile" type="button" role="listitem" aria-label="Open QR code 02">
+            <img src="assets/QR%20grid.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="qr-tile" type="button" role="listitem" aria-label="Open QR code 03">
+            <img src="assets/QR%20grid.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="qr-tile" type="button" role="listitem" aria-label="Open QR code 04">
+            <img src="assets/QR%20grid.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="qr-tile" type="button" role="listitem" aria-label="Open QR code 05">
+            <img src="assets/QR%20grid.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="qr-tile" type="button" role="listitem" aria-label="Open QR code 06">
+            <img src="assets/QR%20grid.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="qr-tile" type="button" role="listitem" aria-label="Open QR code 07">
+            <img src="assets/QR%20grid.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="qr-tile" type="button" role="listitem" aria-label="Open QR code 08">
+            <img src="assets/QR%20grid.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="qr-tile" type="button" role="listitem" aria-label="Open QR code 09">
+            <img src="assets/QR%20grid.svg" alt="" aria-hidden="true" />
+          </button>
+        </div>
         <p class="swipe-hint">SWIPE → 9 CODES</p>
       </div>
     </section>
@@ -186,7 +215,12 @@
       </div>
 
       <div class="agenda__body">
-        <div class="agenda__rows" id="agendaRows" role="tabpanel" aria-live="polite"></div>
+        <div class="agenda__rows" id="agendaRows" role="tabpanel" aria-live="polite">
+          <picture>
+            <source media="(max-width: 480px)" srcset="assets/Day%201%20rows%28phone%29.svg" />
+            <img class="agenda__rows-asset" src="assets/Day%201%20rows.svg" alt="Day 1 event schedule" />
+          </picture>
+        </div>
 
         <aside class="agenda__aside">
           <div class="finale">
@@ -200,7 +234,7 @@
             </ul>
             <p class="script script--m finale__script">one crown per track.</p>
           </div>
-          <img class="agenda__compass" src="assets/compass.png" alt="" aria-hidden="true" />
+          <img class="agenda__compass" src="assets/compass.svg" alt="" aria-hidden="true" />
         </aside>
       </div>
     </section>
@@ -234,7 +268,7 @@
 
     <!-- FINAL CTA -->
     <section class="cta" id="join">
-      <img class="cta__ajala" src="assets/ajala.png" alt="" />
+      <img class="cta__ajala" src="assets/ajala.svg" alt="" />
       <p class="script cta__script">ready to set sail?</p>
       <h2 class="cta__title">JOIN THE HUNT.</h2>
       <p class="body cta__text">Gather your crew, read the map and claim your treasure before someone else does.</p>
@@ -249,8 +283,8 @@
   <footer class="footer">
     <div class="footer__brand">
       <div class="footer__logo">
-        <img class="footer__mark" src="assets/logo-mark.png" alt="" />
-        <img class="footer__name" src="assets/logo-name.png" alt="HUNT2BUILD" />
+        <img class="footer__mark" src="assets/logo-mark.svg" alt="" />
+        <img class="footer__name" src="assets/logo-name.svg" alt="HUNT2BUILD" />
       </div>
       <img class="footer__badge" src="assets/footer-badge.svg" alt="CSE Club" />
     </div>
